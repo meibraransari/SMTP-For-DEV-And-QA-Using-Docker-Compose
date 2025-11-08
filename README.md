@@ -1,4 +1,4 @@
-> **📬 Self-Host Your SMTP Server for DEV and QA Using Docker Compose**
+#  **📬 Self-Host Your SMTP Server for DEV and QA Using Docker Compose**
 
 It introduces all three examples, explains when to use each, and provides quick links, structure, and setup tips.
 You can place this file at the root of your project, alongside the `mail1/`, `mail2/`, and `mail3/` folders.
@@ -16,12 +16,11 @@ This repository contains **three example configurations** showing different leve
 
 ## 🧭 Overview
 
-| Folder              | Description                            | Auth Type              | Recommended For                |
-| : | :- | : | :-- |
-| [`mail1/`](./mail1) | Basic setup — no authentication        | ❌ None                 | Local DEV / personal testing   |
-| [`mail2/`](./mail2) | Single-user authentication             | 🔑 Username + Password | Individual developer testing   |
-| [`mail3/`](./mail3) | Multi-user authentication (file-based) | 👥 Multiple accounts   | Shared QA or team environments |
-
+| Folder | Description | Auth Type | Recommended For |
+|--------|------------|-----------|----------------|
+| [`mail1/`](./mail1) | Basic setup — no authentication | ❌ None | Local DEV / personal testing |
+| [`mail2/`](./mail2) | Single-user authentication | 🔑 Username + Password | Individual developer testing |
+| [`mail3/`](./mail3) | Multi-user authentication (file-based) | 👥 Multiple accounts | Shared QA or team environments |
 
 
 ## ⚙️ What You’ll Learn
