@@ -133,7 +133,7 @@ If you’re using authentication (mail2 or mail3), include the `--user` flag:
 ## 🔐 Authentication Options Summary
 
 | Setup     | SMTP Auth                   | Web UI Auth      | Multiple Users | Notes                          |
-| :-- | :-- | : | :- | :-- |
+| :-- | :-- | :-- | :-- | :-- |
 | **Mail1** | Disabled                    | None             | ❌              | Quick & easy for local testing |
 | **Mail2** | Single user (env vars)      | Same credentials | ❌              | Simple secure testing          |
 | **Mail3** | File-based (from `/config`) | File-based       | ✅              | Ideal for shared DEV/QA        |
