@@ -15,7 +15,7 @@ services:
     image: axllent/mailpit:latest
     #image: ibraransaridocker/mailpit:latest
     container_name: mailpit
-    restart: unless-stopped
+    restart: always
     ports:
       - "8025:8025"  # Web UI
       - "1025:1025"  # SMTP

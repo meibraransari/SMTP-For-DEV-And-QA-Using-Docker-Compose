@@ -15,6 +15,7 @@ services:
     # Alternative image:
     # image: ibraransaridocker/mailpit:latest
     container_name: mailpit
+    restart: always
     ports:
       - "8025:8025" # 🌐 Web GUI
       - "1025:1025" # 📮 SMTP
