@@ -25,7 +25,7 @@ services:
       
     volumes:
       - ./mailpit-data:/data
-      - ./config:/config:ro  # Mount config directory as read-only
+      - ./configs:/config:ro  # Mount config directory as read-only
       # Optional: TLS certificates
       # - ./certs:/certs:ro
 
