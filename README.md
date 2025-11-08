@@ -82,7 +82,7 @@ project-root/
 
 ## 🚀 Quick Start
 
-### 1️⃣ Choose a setup
+### Choose a setup
 
 Pick one of the examples based on your needs:
 
@@ -90,7 +90,7 @@ Pick one of the examples based on your needs:
 * **[`mail2/`](./mail2)** → single-user (auth via env vars)
 * **[`mail3/`](./mail3)** → multi-user (auth via config files)
 
-### 2️⃣ Run the container
+### Run the container
 
 ```bash
 git clone https://github.com/meibraransari/SMTP-For-DEV-And-QA-Using-Docker-Compose.git
@@ -99,7 +99,18 @@ cd mail1   # or mail2, mail3
 docker compose up -d
 ```
 
-### 3️⃣ Access the Web UI
+### Point DNS Records or add host entry
+https://pihole.devopsinaction.lab/admin/dns_records.php
+smtp.devopsinaction.lab 192.168.1.100
+webmail.devopsinaction.lab 192.168.1.102
+
+### Add Reverse Proxy 
+https://npm.devopsinaction.lab/nginx/proxy
+webmail.devopsinaction.lab 192.168.1.100 8025
+Apply SSL and enable web socket support
+
+
+### Access the Web UI
 
 Open your browser:
 
@@ -107,7 +118,7 @@ Open your browser:
 
 *(or use your local IP if on a LAN, e.g., `http://192.168.1.100:8025`)*
 
-### 4️⃣ Send a Test Email
+### Send a Test Email
 
 You can test with `curl` (or from your app):
 
