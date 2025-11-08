@@ -1,0 +1,11 @@
+# SMTP Authentication
+# Format: username:password (bcrypt hashed passwords recommended)
+# Or plain text: username:password
+
+# Plain text passwords (simple, but less secure)
+user1:user1123
+user2:user2123
+admin:admin123
+
+# OR use bcrypt hashed passwords (more secure):
+# user1:$2a$10$abcdefghijklmnopqrstuvwxyz...

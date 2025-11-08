@@ -1,0 +1,30 @@
+services:
+  mailpit:
+    image: axllent/mailpit:latest
+    container_name: mailpit
+    restart: unless-stopped
+    ports:
+      - "8025:8025"  # Web UI
+      - "1025:1025"  # SMTP
+    environment:
+      TZ: Europe/London 
+      # Database
+      MP_MAX_MESSAGES: 5000    
+      # SMTP Authentication (file-based - multiple users)
+      MP_SMTP_AUTH_FILE: /config/smtp-auth.txt
+      MP_SMTP_AUTH_ACCEPT_ANY: 0  # Require authentication
+      MP_SMTP_AUTH_ALLOW_INSECURE: 1
+      
+      # Web UI Authentication (file-based - multiple users)
+      MP_UI_AUTH_FILE: /config/ui-auth.txt
+      
+      # Optional: TLS Support
+      # MP_SMTP_TLS_CERT: /certs/cert.pem
+      # MP_SMTP_TLS_KEY: /certs/key.pem
+      
+    volumes:
+      - ./mailpit-data:/data
+      - ./config:/config:ro  # Mount config directory as read-only
+      # Optional: TLS certificates
+      # - ./certs:/certs:ro
+

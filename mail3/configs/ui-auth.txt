@@ -1,0 +1,6 @@
+# Web UI Authentication
+# Format: username:password
+
+admin:admin123
+user1:user1123
+viewer:viewer123
