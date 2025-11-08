@@ -99,18 +99,39 @@ cd mail1   # or mail2, mail3
 docker compose up -d
 ```
 
-### Point DNS Records or add host entry
-https://pihole.devopsinaction.lab/admin/dns_records.php
-smtp.devopsinaction.lab 192.168.1.100
-webmail.devopsinaction.lab 192.168.1.102
 
-### Add Reverse Proxy 
-https://npm.devopsinaction.lab/nginx/proxy
-webmail.devopsinaction.lab 192.168.1.100 8025
-Apply SSL and enable web socket support
+## 🌐 DevOps in Action – DNS & Reverse Proxy Setup
+
+### 🧭 Point DNS Records / Add Host Entries
+
+🔗 **Access:** [Pi-hole DNS Admin](https://pihole.devopsinaction.lab/admin/dns_records.php)
+
+| Hostname                        | IP Address      | Description       |
+| ------------------------------- | --------------- | ----------------- |
+| 📨 `smtp.devopsinaction.lab`    | `192.168.1.100` | SMTP Server       |
+| 💌 `webmail.devopsinaction.lab` | `192.168.1.102` | Webmail Interface |
 
 
-### Access the Web UI
+
+### 🔁 Add Reverse Proxy Configuration
+
+🔗 **Access:** [NGINX Proxy Manager](https://npm.devopsinaction.lab/nginx/proxy)
+
+| Domain                          | Forward Host    | Forward Port | Notes               |
+| ------------------------------- | --------------- | ------------ | ------------------- |
+| 💌 `webmail.devopsinaction.lab` | `192.168.1.100` | `8025`       | Mail UI |
+
+#### ⚙️ Settings
+
+* ✅ **Apply SSL Certificate** (Let's Encrypt or custom)
+* 🔄 **Enable WebSocket Support**
+
+
+🧩 **Result:**
+Your `webmail.devopsinaction.lab` will now securely proxy to the internal mail service at `192.168.1.100:8025` with SSL and WebSockets enabled. 🎉
+
+
+### 🌐 Access the Web UI
 
 Open your browser:
 
@@ -118,7 +139,7 @@ Open your browser:
 
 *(or use your local IP if on a LAN, e.g., `http://192.168.1.100:8025`)*
 
-### Send a Test Email
+### 💌 Send a Test Email
 
 You can test with `curl` (or from your app):
 
