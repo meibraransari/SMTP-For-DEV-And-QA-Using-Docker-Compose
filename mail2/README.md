@@ -44,7 +44,7 @@ services:
 Mailpit can be secured so that only authorized users can access it:
 
 | 🔧 Setting                    | 💬 Description                                                                       |
-| -- |  |
+| -- | -- |
 | `MP_SMTP_AUTH`                | Defines the **SMTP username and password** used by apps or scripts to send emails.   |
 | `MP_UI_AUTH`                  | Defines the **Web UI username and password** to log in to the Mailpit web interface. |
 | `MP_SMTP_AUTH_ALLOW_INSECURE` | Allows authentication over **non-TLS** connections (OK for local testing).           |
