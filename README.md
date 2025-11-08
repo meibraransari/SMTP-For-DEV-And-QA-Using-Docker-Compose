@@ -1,16 +1,12 @@
-#  **📬 Self-Host Your SMTP Server for DEV and QA Using Docker Compose**
-
-It introduces all three examples, explains when to use each, and provides quick links, structure, and setup tips.
-You can place this file at the root of your project, alongside the `mail1/`, `mail2/`, and `mail3/` folders.
-
-
-
 # 📬 Self-Host Your SMTP Server for DEV and QA Using Docker Compose
 
 Easily **self-host your own SMTP testing server** for **development (DEV)** and **quality assurance (QA)** using [Mailpit](https://github.com/axllent/mailpit).
 
 Mailpit lets you capture, inspect, and debug outgoing emails from your applications — all in a clean, web-based UI.
 This repository contains **three example configurations** showing different levels of security and complexity using **Docker Compose**.
+
+It introduces all three examples, explains when to use each, and provides quick links, structure, and setup tips.
+You can place this file at the root of your project, alongside the `mail1/`, `mail2/`, and `mail3/` folders.
 
 
 
