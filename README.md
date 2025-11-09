@@ -19,6 +19,12 @@ You can place this file at the root of your project, alongside the `mail1/`, `ma
 | [`mail3/`](./mail3) | Multi-user authentication (file-based) | 👥 Multiple accounts | Shared QA or team environments |
 
 
+## 🎬 Video Demonstration
+
+[![Watch on Youtube](https://i.ytimg.com/vi/MEiJGsFkaI8/maxresdefault.jpg)](https://youtu.be/MEiJGsFkaI8)
+
+
+
 ## ⚙️ What You’ll Learn
 
 * 🐳 How to run **Mailpit** in Docker
@@ -98,38 +104,6 @@ cd SMTP-For-DEV-And-QA-Using-Docker-Compose
 cd mail1   # or mail2, mail3
 docker compose up -d
 ```
-
-
-## 🌐 DevOps in Action – DNS & Reverse Proxy Setup
-
-### 🧭 Point DNS Records / Add Host Entries
-
-🔗 **Access:** [Pi-hole DNS Admin](https://pihole.devopsinaction.lab/admin/dns_records.php)
-
-| Hostname                        | IP Address      | Description       |
-| ------------------------------- | --------------- | ----------------- |
-| 📨 `smtp.devopsinaction.lab`    | `192.168.1.100` | SMTP Server       |
-| 💌 `webmail.devopsinaction.lab` | `192.168.1.102` | Webmail Interface |
-
-
-
-### 🔁 Add Reverse Proxy Configuration
-
-🔗 **Access:** [NGINX Proxy Manager](https://npm.devopsinaction.lab/nginx/proxy)
-
-| Domain                          | Forward Host    | Forward Port | Notes               |
-| ------------------------------- | --------------- | ------------ | ------------------- |
-| 💌 `webmail.devopsinaction.lab` | `192.168.1.100` | `8025`       | Mail UI |
-
-#### ⚙️ Settings
-
-* ✅ **Apply SSL Certificate** (Let's Encrypt or custom)
-* 🔄 **Enable WebSocket Support**
-
-
-🧩 **Result:**
-Your `webmail.devopsinaction.lab` will now securely proxy to the internal mail service at `192.168.1.100:8025` with SSL and WebSockets enabled. 🎉
-
 
 ### 🌐 Access the Web UI
 
